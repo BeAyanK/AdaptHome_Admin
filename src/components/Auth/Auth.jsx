@@ -96,9 +96,9 @@ const Auth = () => {
 
   return (
     <div >
-      <h1 className="text-center mt-5 mb-5 pt-5 text-white">AdaptHome Admin</h1>
+      <h1 className="text-center mt-5 mb-5 pt-5 text-white">TechInfinite Admin</h1>
       <Container className="my-5">
-        <Row className="justify-content-center my-4 py-4">
+        <Row className="justify-content-center my-4 py-4" >
           <Col md={6}>
             <Form onSubmit={submitHandler}>
               <Form.Group className="my-3" controlId="email">
@@ -130,7 +130,7 @@ const Auth = () => {
                     Login
                   </Button>
                 ) : (
-                  <p>Sending request...</p>
+                  <p className="text-white">Logging in...</p>
                 )}
               </div>
             </Form>

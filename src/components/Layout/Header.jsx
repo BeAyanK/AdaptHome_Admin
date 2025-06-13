@@ -21,7 +21,7 @@ dispatch(authActions.logout())
     <Navbar bg="light" variant="light" expand="lg">
       <Container>
         <Navbar.Brand>
-          AdaptHome Admin
+          TechInfinite Admin
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="admin-navbar-nav" />
         <Navbar.Collapse id="admin-navbar-nav">
