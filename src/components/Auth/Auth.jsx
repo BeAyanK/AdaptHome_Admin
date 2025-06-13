@@ -96,13 +96,13 @@ const Auth = () => {
 
   return (
     <div >
-      <h1 className="text-center mt-5 mb-5 pt-5">AdaptHome Admin</h1>
+      <h1 className="text-center mt-5 mb-5 pt-5 text-white">AdaptHome Admin</h1>
       <Container className="my-5">
         <Row className="justify-content-center my-4 py-4">
           <Col md={6}>
             <Form onSubmit={submitHandler}>
               <Form.Group className="my-3" controlId="email">
-                <Form.Label>Your Email</Form.Label>
+                <Form.Label className='text-white'>Your Email</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Enter your email"
@@ -113,7 +113,7 @@ const Auth = () => {
                 />
               </Form.Group>
               <Form.Group className="my-3" controlId="password">
-                <Form.Label>Your Password</Form.Label>
+                <Form.Label className='text-white'>Your Password</Form.Label>
                 <Form.Control
                   type="password"
                   placeholder="Enter your password"
@@ -126,7 +126,7 @@ const Auth = () => {
               {error && <p className="text-danger">{error}</p>}
               <div className="d-grid gap-2 pt-4">
                 {!isLoading ? (
-                  <Button variant="light" type="submit" style={{border:'1px solid blue'}} >
+                  <Button variant="light" type="submit">
                     Login
                   </Button>
                 ) : (
