@@ -1,0 +1,13 @@
+
+html {
+  color: white;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100%;
+}
+
+body {
+  background: transparent;
+  min-height: 100vh;
+}

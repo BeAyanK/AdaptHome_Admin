@@ -115,7 +115,7 @@ const ProductPage = () => {
   };
 
   return (
-    <Container className="my-5">
+    <Container className="my-5 text-white">
       <h2 className="mb-2">Product Management</h2>
       <Form onSubmit={handleSubmit}>
         <Row className="g-3">
@@ -173,8 +173,8 @@ const ProductPage = () => {
               ))}
             </Form.Select>
           </Col>
-          <Col xs={12} className="d-grid gap-2">
-            <Button type="submit" variant="secondary" size="lg">
+          <Col xs={12} className="d-grid gap-2 mt-5">
+            <Button type="submit" variant="light" size="lg">
               {editingId ? "Update Product" : "Add Product"}
             </Button>
           </Col>

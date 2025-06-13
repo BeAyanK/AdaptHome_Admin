@@ -70,7 +70,7 @@ const CategoryPage = () => {
   };
 
   return (
-    <Container className="mt-4">
+    <Container className="mt-4 text-white">
       <h3 className="mb-3">Category Management</h3>
 
       <Form onSubmit={handleSubmit}>
@@ -104,7 +104,7 @@ const CategoryPage = () => {
           </Col>
 
           <Col md={3}>
-            <Button type="submit" variant="secondary" className="w-100">
+            <Button type="submit" variant="light" className="w-100">
               {editingId ? "Update" : "Add"} Category
             </Button>
           </Col>

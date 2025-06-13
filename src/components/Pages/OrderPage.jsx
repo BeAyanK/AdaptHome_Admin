@@ -66,7 +66,7 @@ const OrderPage = () => {
   };
 
   return (
-    <Container className="my-5">
+    <Container className="my-5 text-white">
       <h3 className="mb-4">Order Management</h3>
 
       {loading ? (

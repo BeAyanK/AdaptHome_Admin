@@ -18,9 +18,9 @@ dispatch(authActions.logout())
 
 
   return (
-    <Navbar bg="secondary" variant="dark" expand="lg">
+    <Navbar bg="light" variant="light" expand="lg">
       <Container>
-        <Navbar.Brand as={Link} to="/home">
+        <Navbar.Brand>
           AdaptHome Admin
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="admin-navbar-nav" />
@@ -40,7 +40,7 @@ dispatch(authActions.logout())
           </Nav>
           
           <Button onClick={logoutHandler}
-            variant="outline-light"
+            variant="outline-danger"
           >
             Logout
           </Button>

@@ -63,7 +63,7 @@ const Auth = () => {
 
       const data = response.data;
 
-        if (!adminEmails.includes(data.email)) {
+      if (!adminEmails.includes(data.email)) {
         dispatch(authActions.setError('Access denied. Admins only.'));
         dispatch(authActions.setLoading(false));
         return;
@@ -74,7 +74,7 @@ const Auth = () => {
         email: data.email,
       }));
 
-      navigate('/home', { replace: true });
+      navigate('/product', { replace: true });
 
 
     } catch (err) {
@@ -95,68 +95,49 @@ const Auth = () => {
   }, [error, dispatch]);
 
   return (
-    <> <h1 className="text-center mt-4 mb-4">AdaptHome Admin</h1>
-    <Container className="mt-5">
-      
-      <Row className="justify-content-center">
-        <Col md={6}>
-          <h2 className="mb-4 text-center">Admin Login</h2>
-          <Form onSubmit={submitHandler}>
-            <Form.Group className="mb-3" controlId="email">
-              <Form.Label>Your Email</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                ref={emailInputRef}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="password">
-              <Form.Label>Your Password</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="Enter your password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-                ref={passwordInputRef}
-              />
-            </Form.Group>
-            {/* {!isLogin && (
-              <Form.Group className="mb-3" controlId="confirmPassword">
-                <Form.Label>Confirm Password</Form.Label>
+    <div >
+      <h1 className="text-center mt-5 mb-5 pt-5">AdaptHome Admin</h1>
+      <Container className="my-5">
+        <Row className="justify-content-center my-4 py-4">
+          <Col md={6}>
+            <Form onSubmit={submitHandler}>
+              <Form.Group className="my-3" controlId="email">
+                <Form.Label>Your Email</Form.Label>
                 <Form.Control
-                  type="password"
-                  placeholder="Confirm your password"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
-                  ref={confirmPasswordInputRef}
+                  ref={emailInputRef}
                 />
               </Form.Group>
-            )} */}
-            {error && <p className="text-danger">{error}</p>}
-            <div className="d-grid gap-2">
-              {!isLoading ? (
-                <Button variant="primary" type="submit">
-                  Login
-                </Button>
-              ) : (
-                <p>Sending request...</p>
-              )}
-            </div>
-          </Form>
-          {/* <div className="text-center mt-3">
-            <Button variant="link" onClick={switchAuthModeHandler}>
-              {isLogin ? 'Create new account' : 'Login with existing account'}
-            </Button>
-          </div> */}
-        </Col>
-      </Row>
-    </Container>
-    </>
+              <Form.Group className="my-3" controlId="password">
+                <Form.Label>Your Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                  ref={passwordInputRef}
+                />
+              </Form.Group>
+              {error && <p className="text-danger">{error}</p>}
+              <div className="d-grid gap-2 pt-4">
+                {!isLoading ? (
+                  <Button variant="light" type="submit" style={{border:'1px solid blue'}} >
+                    Login
+                  </Button>
+                ) : (
+                  <p>Sending request...</p>
+                )}
+              </div>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 
