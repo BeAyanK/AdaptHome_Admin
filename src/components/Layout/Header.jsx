@@ -7,21 +7,21 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Header = () => {
-  const dispatch=useDispatch()
+  const dispatch = useDispatch()
 
-  const navigate=useNavigate()
+  const navigate = useNavigate()
 
-  const logoutHandler=()=>{
-navigate('/')
-dispatch(authActions.logout())
+  const logoutHandler = () => {
+    navigate('/')
+    dispatch(authActions.logout())
   }
 
 
   return (
-    <Navbar bg="light" variant="light" expand="lg">
+    <Navbar bg="light" variant="light" expand="lg" fixed="top">
       <Container>
         <Navbar.Brand>
-          TechInfinite Admin
+          Tech-Infinite Admin
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="admin-navbar-nav" />
         <Navbar.Collapse id="admin-navbar-nav">
@@ -38,7 +38,7 @@ dispatch(authActions.logout())
               </Nav.Link>
             </>
           </Nav>
-          
+
           <Button onClick={logoutHandler}
             variant="outline-danger"
           >
